@@ -8,24 +8,24 @@ datasource db {
 }
 
 model address {
-  id          Int        @id
+  id          Int        @default(autoincrement()) @id
   user_id     Int?
   street      String?    @db.VarChar
   postal_code String?    @db.VarChar
   city        String?    @db.VarChar
-  created_at  DateTime?  @db.Timestamp(6)
+  created_at  DateTime   @default(now()) @db.Timestamp(6)
   users       users?     @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
   bookings    bookings[]
 }
 
 model bookings {
-  id                Int                 @id
+  id                Int                 @default(autoincrement()) @id
   address_id        Int?
   user_id           Int?
   time              DateTime?           @db.Timestamp(6)
   date              DateTime?           @db.Date
   status            booking_status?
-  created_at        DateTime?           @db.Timestamp(6)
+  created_at        DateTime?           @default(now()) @db.Timestamp(6)
   address           address?            @relation(fields: [address_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
   users             users?              @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
   bookings_products bookings_products[]
@@ -41,7 +41,7 @@ model bookings_products {
 }
 
 model products {
-  id                Int                 @id
+  id                Int                 @default(autoincrement()) @id
   name              String?             @db.VarChar
   description       String?             @db.VarChar
   quantity          Int?
@@ -49,10 +49,10 @@ model products {
 }
 
 model users {
-  id         Int        @id
+  id         Int        @default(autoincrement()) @id
   username   String?    @db.VarChar
   role       role?
-  created_at DateTime?  @db.Timestamp(6)
+  created_at DateTime?  @default(now()) @db.Timestamp(6)
   address    address[]
   bookings   bookings[]
 }
