@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,10 +7,63 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id Int @id @default(autoincrement())
-  email String @unique
-  name String?
+model address {
+  id          Int        @id
+  user_id     Int?
+  street      String?    @db.VarChar
+  postal_code String?    @db.VarChar
+  city        String?    @db.VarChar
+  created_at  DateTime?  @db.Timestamp(6)
+  users       users?     @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  bookings    bookings[]
 }
 
+model bookings {
+  id                Int                 @id
+  address_id        Int?
+  user_id           Int?
+  time              DateTime?           @db.Timestamp(6)
+  date              DateTime?           @db.Date
+  status            booking_status?
+  created_at        DateTime?           @db.Timestamp(6)
+  address           address?            @relation(fields: [address_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users             users?              @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  bookings_products bookings_products[]
+}
 
+model bookings_products {
+  bookings_id Int
+  products_id Int
+  bookings    bookings @relation(fields: [bookings_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  products    products @relation(fields: [products_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([bookings_id, products_id])
+}
+
+model products {
+  id                Int                 @id
+  name              String?             @db.VarChar
+  description       String?             @db.VarChar
+  quantity          Int?
+  bookings_products bookings_products[]
+}
+
+model users {
+  id         Int        @id
+  username   String?    @db.VarChar
+  role       role?
+  created_at DateTime?  @db.Timestamp(6)
+  address    address[]
+  bookings   bookings[]
+}
+
+enum booking_status {
+  created
+  cancelled
+  done
+}
+
+enum role {
+  admin
+  customer
+}
