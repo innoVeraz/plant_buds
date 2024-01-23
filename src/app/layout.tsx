@@ -1,9 +1,9 @@
-import Header from "@/components/Header";
+import Nav from "@/components/Nav";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manjari } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Manjari({ weight: ["100", "400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Plant Buds",
@@ -17,8 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
+      <body className={`${font.className} bg-pri-dg lg sm:text-center `}>
         {children}
       </body>
     </html>
