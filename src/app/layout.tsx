@@ -17,9 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${font.className} bg-pri-dg lg sm:text-center `}>
-        {children}
-      </body>
+      <body className={`${font.className} lg sm:text-center `}>{children}</body>
     </html>
   );
 }
