@@ -2,7 +2,6 @@
 
 # Adjust NODE_VERSION as desired
 ARG NODE_VERSION=20.11.0
-
 FROM node:${NODE_VERSION}-slim as base
 
 LABEL fly_launch_runtime="Next.js/Prisma"
@@ -33,7 +32,9 @@ RUN npx prisma generate
 COPY --link . .
 
 # Build application
-# RUN npm run build
+RUN --mount=type=secret,id=DATABASE_URL \
+    DATABASE_URL="$(cat /run/secrets/DATABASE_URL)" \
+    npm run build
 
 # Remove development dependencies
 RUN npm prune --omit=dev
@@ -52,4 +53,4 @@ COPY --from=build /app /app
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
-ENTRYPOINT "./entrypoint.sh"
+CMD [ "npm", "run", "start" ]

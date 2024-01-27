@@ -29,5 +29,10 @@
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.0"
+  },
+  "dockerfile": {
+    "secrets": [
+      "DATABASE_URL"
+    ]
   }
 }
