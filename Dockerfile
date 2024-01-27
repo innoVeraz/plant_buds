@@ -31,6 +31,11 @@ RUN npx prisma generate
 # Copy application code
 COPY --link . .
 
+# Database migrations
+RUN --mount=type=secret,id=DATABASE_URL \
+    DATABASE_URL="$(cat /run/secrets/DATABASE_URL)" \
+    npx prisma migrate deploy
+
 # Build application
 RUN --mount=type=secret,id=DATABASE_URL \
     DATABASE_URL="$(cat /run/secrets/DATABASE_URL)" \
