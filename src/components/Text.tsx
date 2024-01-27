@@ -1,4 +1,4 @@
-export const ServiceText = () => {
+export const OurService = () => {
   return (
     <div className="text-pri-dg">
       <h2 className="font-bold text-2xl">En food truck för dina växter</h2>
@@ -14,12 +14,28 @@ export const ServiceText = () => {
   );
 };
 
-export const VermentText = () => {
+export const BugService = () => {
   return (
     <div className="bg-acc-lg w-100 h-150 text-pri-dg">
       Vi identifierar och hjälper dig bli fri från ohyran. Vid behov avlägsnar
       vi plantorna åt dig för att se om vi kan rädda dem beroende på hur stort
       angreppet är.
+    </div>
+  );
+};
+
+export const HowTo = () => {
+  return (
+    <div>
+      <h3>Välj plantor och krukor</h3>
+      <p>
+        Välj det antal plantor du önskar få omplanterade, upp till 10 st totalt.
+        Omplanteringen sker till en baskruka i ekologisk återvunnen plast och
+        kostar 25kr till de mindre plantorna och 50kr till de större. Vi har
+        även ett hundratal fina krukor i vår shop att beställa. OBS: Det går
+        endast att beställa krukor i samband med en omplantering, krukorna tas
+        med till ditt bokade omplanteringstillfälle.
+      </p>
     </div>
   );
 };
