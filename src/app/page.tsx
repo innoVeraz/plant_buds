@@ -1,12 +1,12 @@
 import Image from "next/image";
-import logoImg from "./assets/logo-white.svg";
-import plantbusImg from "./assets/plantbus.svg";
-import peopleImg from "./assets/people.svg";
-import vermentImg from "./assets/verment.svg";
+import logoImg from "../../public/logo-white.svg";
+import plantbusImg from "../../public/plantbus.svg";
+import peopleImg from "../../public/people.svg";
+import vermentImg from "../../public/verment.svg";
 
 import Nav from "@/components/Nav";
 import Modal from "@/components/Modal";
-import { ServiceText, VermentText } from "@/components/Text";
+import { OurService, BugService } from "@/components/Text";
 
 const Home = () => {
   return (
@@ -32,7 +32,7 @@ const Home = () => {
           src={peopleImg}
           alt="a group of people posing for the camera with plants sorounding them"
         />
-        <ServiceText />
+        <OurService />
         <button className="bg-sec-mg p-1">
           Se om vi kan komma hem till dig!
         </button>
@@ -40,7 +40,7 @@ const Home = () => {
       <section>
         <Image src={vermentImg} alt="image of a cartoon bug in a plant pot" />
         <h1 className="text-6xl font-extralight">Ohyra?</h1>
-        <VermentText />
+        <BugService />
       </section>
 
       <footer className="h-24">

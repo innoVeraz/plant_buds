@@ -6,9 +6,8 @@ import {
   ChevronRightIcon,
   CalendarIcon,
 } from "@radix-ui/react-icons";
-import Link from "next/link";
 
-const Order = () => {
+const Booking = () => {
   return (
     <div className="text-pri-dg max-w-screen-2xl">
       <label htmlFor=""></label>
@@ -39,4 +38,4 @@ const Order = () => {
   );
 };
 
-export default Order;
+export default Booking;
