@@ -11,16 +11,19 @@ import { OurService, BugService } from "@/components/Text";
 const Home = () => {
   return (
     <div className="text-white bg-pri-dg">
-      <div className="flex justify-center">
+      <div className="flex flex-col items-center">
         <Image src={logoImg} alt="logotype" />
+        <p className="font-thin text-2xl">planting a smile on your face</p>
       </div>
-      <Nav />
-      <Modal />
+      <div>
+        <Nav />
+      </div>
+
       <p>Skriv in ditt postnummer för att se om vi jobbar i ditt område</p>
       <form action="submit" className="flex gap-3 justify-center">
         <input type="text" placeholder="123 45" />
         <div>
-          <button className="bg-gray-400">VISA</button>
+          <Modal>VISA</Modal>
         </div>
       </form>
       <section>
