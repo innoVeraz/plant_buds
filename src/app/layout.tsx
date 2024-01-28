@@ -1,4 +1,4 @@
-import Nav from "@/components/Nav";
+import Nav from "@/components/Nav/MenuNav";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Manjari } from "next/font/google";
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${font.className} lg sm:text-center `}>{children}</body>
+      <body className={`${font.className}`}>{children}</body>
     </html>
   );
 }

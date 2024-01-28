@@ -1,31 +1,18 @@
 import Image from "next/image";
-import logoImg from "../../public/logo-white.svg";
+
 import plantbusImg from "../../public/plantbus.svg";
 import peopleImg from "../../public/people.svg";
-import vermentImg from "../../public/verment.svg";
+import bugImg from "../../public/bug.svg";
 
-import Nav from "@/components/Nav";
-import Modal from "@/components/Modal";
 import { OurService, BugService } from "@/components/Text";
+import { MenuNav } from "@/components/Nav/MenuNav";
+import { FirstHeader } from "@/components/Header/FirstHeader";
 
 const Home = () => {
   return (
-    <div className="text-white bg-pri-dg">
-      <div className="flex flex-col items-center">
-        <Image src={logoImg} alt="logotype" />
-        <p className="font-thin text-2xl">planting a smile on your face</p>
-      </div>
-      <div>
-        <Nav />
-      </div>
-
-      <p>Skriv in ditt postnummer för att se om vi jobbar i ditt område</p>
-      <form action="submit" className="flex gap-3 justify-center">
-        <input type="text" placeholder="123 45" />
-        <div>
-          <Modal>VISA</Modal>
-        </div>
-      </form>
+    <>
+      <FirstHeader />
+      <MenuNav />
       <section>
         <Image src={plantbusImg} alt="a truck filled with flowers" />
         <h1 className="text-6xl p-2 font-thin">Vår Service</h1>
@@ -41,7 +28,7 @@ const Home = () => {
         </button>
       </section>
       <section>
-        <Image src={vermentImg} alt="image of a cartoon bug in a plant pot" />
+        <Image src={bugImg} alt="image of a cartoon bug in a plant pot" />
         <h1 className="text-6xl font-extralight">Ohyra?</h1>
         <BugService />
       </section>
@@ -50,7 +37,7 @@ const Home = () => {
         <p>instagram</p>
         <p>facebook</p>
       </footer>
-    </div>
+    </>
   );
 };
 

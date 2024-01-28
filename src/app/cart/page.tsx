@@ -1,11 +1,11 @@
-import Header from "@/components/Header";
+import { SecondHeader } from "@/components/Header/SecondHeader";
+import { BottomNav } from "@/components/Nav/BottomNav";
 import { HowTo } from "@/components/Text";
-import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 
 const Product = () => {
   return (
     <div>
-      <Header>Varukorg</Header>
+      <SecondHeader>Varukorg</SecondHeader>
       <div className="bg-acc-lg">
         <HowTo />
       </div>
@@ -30,12 +30,7 @@ const Product = () => {
       <div className="shadow-md rounded-lg w-36 h-36 flex items-center">
         <p> Loopa ut krukor</p>
       </div>
-      <div className="flex gap-2 bg-sec-mg justify-center text-white">
-        <ChevronLeftIcon />
-        <p>Gå tillbaka</p>
-        <p>Gå vidare</p>
-        <ChevronRightIcon />
-      </div>
+      <BottomNav />
     </div>
   );
 };
