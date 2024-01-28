@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Nav() {
+export function MenuNav() {
   return (
     <nav className=" bg-sec-mg">
       <div className="flex justify-center gap-10 text-2xl font-thin p-3 text-white">
