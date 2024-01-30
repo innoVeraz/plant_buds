@@ -5,12 +5,14 @@ import { BottomNav } from "@/components/Nav/BottomNav";
 
 const Delivery = () => {
   return (
-    <>
-      <SecondHeader>Leveransuppgifter</SecondHeader>
-      <DeliveryForm />
-      <MessageForm />
-      <BottomNav />
-    </>
+    <div className="max-w-screen-lg m-auto">
+      <div className="max-w-screen-sm m-auto">
+        <SecondHeader>Leveransuppgifter</SecondHeader>
+        <DeliveryForm />
+        <MessageForm />
+        <BottomNav />
+      </div>
+    </div>
   );
 };
 

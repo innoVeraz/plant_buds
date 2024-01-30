@@ -1,4 +1,3 @@
-import Nav from "@/components/Nav/MenuNav";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Manjari } from "next/font/google";
@@ -16,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="se">
       <body className={`${font.className}`}>{children}</body>
     </html>
   );

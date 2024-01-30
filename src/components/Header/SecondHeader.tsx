@@ -9,8 +9,14 @@ type Props = {
 export const SecondHeader = ({ children }: Props) => {
   return (
     <div>
-      <Image src={flowerImg} alt="grön logotyp av en blomma" />
-      <h2 className=" flex justify-center text-4xl text-pri-dg">{children}</h2>
+      <Image
+        src={flowerImg}
+        alt="grön logotyp av en blomma"
+        className="w-14 h-14 mt-10"
+      />
+      <h2 className=" flex justify-center text-4xl text-pri-dg mb-10">
+        {children}
+      </h2>
     </div>
   );
 };

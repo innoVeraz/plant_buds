@@ -3,7 +3,7 @@ import { BottomNav, CalenderNav } from "@/components/Nav";
 
 const Booking = () => {
   return (
-    <div className="text-pri-dg max-w-screen-2xl">
+    <div className="text-pri-dg max-w-screen-sm m-auto">
       <SecondHeader>Reservera tid</SecondHeader>
       <CalenderNav />
       <div className="shadow-md rounded-lg w-36 h-36 flex items-center">

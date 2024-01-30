@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function MenuNav() {
   return (
-    <nav className=" bg-sec-mg">
+    <nav className=" bg-sec-mg mt-10">
       <div className="flex justify-center gap-10 text-2xl font-thin p-3 text-white">
         <Link href="/">Vår service</Link>
         <Link href="/products">Krukor</Link>
