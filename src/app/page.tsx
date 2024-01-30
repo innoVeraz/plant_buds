@@ -8,7 +8,7 @@ import bugImg from "../../public/bug.svg";
 import { OurService, BugService } from "@/components/Text";
 import { Button } from "@material-tailwind/react";
 import { FirstHeader } from "@/components/Header/FirstHeader";
-import PostalNumberForm from "@/components/Form/PostalNumberForm";
+import { PostalNumberForm } from "@/components/PostalNumberForm";
 
 const Home = () => {
   return (
