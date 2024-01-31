@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import plantbusImg from "../../public/hero-plantbus.svg";
-import womanImg from "../../public/woman-planting.jpg";
+import womanImg from "../../public/woman-planting.svg";
 import bugImg from "../../public/bug.svg";
 
 import { OurService, BugService } from "@/components/Text";
