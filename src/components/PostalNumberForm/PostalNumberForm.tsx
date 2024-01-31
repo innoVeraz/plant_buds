@@ -8,15 +8,18 @@ export const PostalNumberForm = () => {
   const [outcome, formAction] = useFormState(checkPostal, "success");
 
   return (
-    <div className="bg-leaf-green p-8 text-white font-thin text-xl">
-      <p className="text-center p-2">
+    <div className="bg-leaf-green p-8 text-white font-thin">
+      <p className="text-center p-2 text:[12px]">
         Skriv in ditt postnummer för att se om vi jobbar i ditt område!
       </p>
-      <form action={formAction} className="flex gap-3 justify-center p-2">
+      <form
+        action={formAction}
+        className="max-w-screen-sm mx-auto flex flex-row md:flex-row gap-3 justify-center p-2"
+      >
         <input
           id="#postalcode"
           name="postalnumber"
-          className="pt-1 pl-2"
+          className="pt-1 pl-2 w-full md:max-w-max"
           type="text"
           placeholder="123 45"
         />
