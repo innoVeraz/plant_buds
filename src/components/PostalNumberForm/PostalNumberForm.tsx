@@ -1,3 +1,5 @@
+"use client";
+
 import { checkPostal } from "@/actions";
 import { FeedbackDialog } from "./FeedbackDialog";
 import { useFormState } from "react-dom";

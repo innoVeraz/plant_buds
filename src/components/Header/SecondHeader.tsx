@@ -1,5 +1,5 @@
 import Image from "next/image";
-import flowerImg from "../../../public/logo-flower-green.svg";
+import flowerImg from "../../../public/plant-buds-small-green.svg";
 import { ReactNode } from "react";
 
 type Props = {
