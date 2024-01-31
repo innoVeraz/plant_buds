@@ -8,10 +8,15 @@ export async function checkPostal(
 ): Promise<Outcome> {
   console.log("check", formData);
 
-  await new Promise<void>((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, 3000);
-  });
   return "success";
+
+  // export async function checkPostal(
+  //   _prevState: string,
+  //   formData: FormData
+  // ): Promise<Outcome> {
+  //   await new Promise<void>((resolve) => {
+  //     setTimeout(() => {
+  //       resolve();
+  //     }, 3000);
+  //   });
 }

@@ -1,7 +1,6 @@
 export const OurService = () => {
   return (
-    <div className="text-pri-dg p-3">
-      <h2 className="font-bold text-2xl">En food truck för dina växter</h2>
+    <div className="text-dark-forest p-3">
       <p className="font-thin">
         Vi erbjuder omplantering för dina inomhusplantor. Under en timme tar
         våra kunniga planteringsproffs hand om upp till 10 st inomhusplantor.
@@ -18,9 +17,12 @@ export const OurService = () => {
 export const BugService = () => {
   return (
     <div className="bg-acc-lg w-100 h-150 text-pri-dg font-thin">
+      <h3>Har du fått objudna hyresgäster?</h3>
       Vi identifierar och hjälper dig bli fri från ohyran. Vid behov avlägsnar
-      vi plantorna åt dig för att se om vi kan rädda dem beroende på hur stort
-      angreppet är.
+      vi plantorna åt dig för att se om vi kan rädda dem (beroende på hur stort
+      angreppet är). Du får information och kunskap om hur du tar hand om
+      angreppet på egen hand, produkter för behandling kan köpas direkt av våra
+      florister.
     </div>
   );
 };

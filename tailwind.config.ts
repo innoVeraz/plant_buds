@@ -10,9 +10,9 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        "pri-dg": "#3E4B2D",
-        "sec-mg": "#5F7347",
-        "acc-lg": "#F0F8E7",
+        "header-gray": "#EAEAE8",
+        "dark-forest": "#3E4B2D",
+        "leaf-green": "#5F7347",
       },
       keyframes: {
         // overlayShow: {
