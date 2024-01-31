@@ -1,6 +1,6 @@
-import Image from "next/image";
-import flowerImg from "../../../public/plant-buds-small-green.svg";
 import { ReactNode } from "react";
+import Image from "next/image";
+import logoImg from "../../../public/plant-buds-green.svg";
 
 type Props = {
   children: ReactNode;
@@ -8,13 +8,9 @@ type Props = {
 
 export const SmallHeader = ({ children }: Props) => {
   return (
-    <div>
-      <Image
-        src={flowerImg}
-        alt="grön logotyp av en blomma"
-        className="w-14 h-14 mt-10"
-      />
-      <h2 className=" flex justify-center text-4xl text-pri-dg mb-10">
+    <div className="flex flex-col items-center">
+      <Image className="pl-8 pr-8 pt-8 pb-3" src={logoImg} alt="logotype" />
+      <h2 className=" text-2xl font-thin text-leaf-green mb-10 mt-10">
         {children}
       </h2>
     </div>
