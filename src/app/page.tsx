@@ -10,6 +10,7 @@ import { Button } from "@material-tailwind/react";
 import { MainHeader } from "@/components/Header/MainHeader";
 import { PostalNumberForm } from "@/components/PostalNumberForm";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
@@ -37,12 +38,7 @@ const Home = () => {
             </Button>
           </Link>
         </section>
-        <section></section>
-
-        <footer className="h-24">
-          <p>instagram</p>
-          <p>facebook</p>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
