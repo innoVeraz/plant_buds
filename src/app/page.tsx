@@ -1,41 +1,48 @@
 "use client";
 
 import Image from "next/image";
-import plantbusImg from "../../public/plantbus.svg";
-import peopleImg from "../../public/people.svg";
+import plantbusImg from "../../public/hero-plantbus.svg";
+import womanImg from "../../public/woman-planting.jpg";
 import bugImg from "../../public/bug.svg";
 
 import { OurService, BugService } from "@/components/Text";
 import { Button } from "@material-tailwind/react";
+<<<<<<< Updated upstream
 import { FirstHeader } from "@/components/Header/FirstHeader";
 import PostalNumberForm from "@/components/Form/PostalNumberForm";
+=======
+import { MainHeader } from "@/components/Header/MainHeader";
+import { PostalNumberForm } from "@/components/PostalNumberForm";
+import Link from "next/link";
+>>>>>>> Stashed changes
 
 const Home = () => {
   return (
-    <div className="">
-      <FirstHeader />
+    <div className="text-dark-forest">
+      <MainHeader />
       {/* <MenuNav /> */}
-      <PostalNumberForm />
-      <div className="max-w-screen-sm m-auto flex flex-col gap-4 pt-2">
+
+      <div className="flex flex-col gap-4">
         <section>
           <Image src={plantbusImg} alt="a truck filled with flowers" />
-          <h1 className="text-6xl p-2 font-thin text-white">Vår Service</h1>
+          <PostalNumberForm />
+          <h2 className="font-thin text-6xl">En food truck för dina växter</h2>
+          <Image src={womanImg} alt="a woman planting indoor plants" />
+
+          <OurService />
         </section>
         <section className="">
-          <Image
-            src={peopleImg}
-            alt="a group of people posing for the camera with plants sorounding them"
-          />
-          <OurService />
-          <Button className="bg-sec-mg  m-auto text-white">
-            Se om vi kan komma hem till dig!
-          </Button>
-        </section>
-        <section>
+          <h1 className="text-dark-forest text-6xl font-extralight ">Ohyra?</h1>
           <Image src={bugImg} alt="image of a cartoon bug in a plant pot" />
-          <h1 className="text-6xl font-extralight ">Ohyra?</h1>
+
           <BugService />
+          <Link href="#postalcode">
+            <Button className="bg-leaf-green  m-auto text-white">
+              Se om vi kan komma hem till dig!
+            </Button>
+          </Link>
         </section>
+        <section></section>
 
         <footer className="h-24">
           <p>instagram</p>

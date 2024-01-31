@@ -1,2 +1,2 @@
-export * from "./FirstHeader";
+export * from "./MainHeader";
 export * from "./SecondHeader";
