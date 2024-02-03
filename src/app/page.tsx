@@ -1,28 +1,29 @@
 "use client";
 
 import Image from "next/image";
-import plantbusImg from "../../public/hero-plantbus.svg";
+import plantbusImg from "../../public/heroImg.svg";
 import womanImg from "../../public/woman-planting.svg";
 import bugImg from "../../public/bug.svg";
 
 import { OurService, BugService } from "@/components/Text";
-import { Button } from "@material-tailwind/react";
 import { MainHeader } from "@/components/Header/MainHeader";
-import { PostalNumberForm } from "@/components/PostalNumberForm";
+import { PostalNumberForm } from "@/components/PostalNumber";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import Button from "@/components/Button";
+import { MenuNav } from "@/components/Nav";
 
 const Home = () => {
   return (
     <div className="text-dark-forest">
       <MainHeader />
-      {/* <MenuNav /> */}
+      <MenuNav />
 
       <div className="flex flex-col gap-4">
         <section>
           <Image src={plantbusImg} alt="a truck filled with flowers" />
           <PostalNumberForm />
-          <h2 className="font-thin text-6xl">En food truck för dina växter</h2>
+
           <Image src={womanImg} alt="a woman planting indoor plants" />
 
           <OurService />
@@ -33,9 +34,7 @@ const Home = () => {
 
           <BugService />
           <Link href="#postalcode">
-            <Button className="bg-leaf-green  m-auto text-white">
-              Se om vi kan komma hem till dig!
-            </Button>
+            <Button variant="primary">Se om vi kan komma hem till dig!</Button>
           </Link>
         </section>
         <Footer />

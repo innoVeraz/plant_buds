@@ -1,6 +1,6 @@
 "use server";
 
-import { Outcome } from "@/components/PostalNumberForm/Outcome";
+import { Outcome } from "@/components/PostalNumber/Outcome";
 import { getInfoByPostalNumber } from "@/services";
 import { z } from "zod";
 

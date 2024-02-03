@@ -1,3 +1,3 @@
-export * from "./DeliveryForm";
-export * from "../PostalNumberForm/PostalNumberForm";
-export * from "./MessageForm";
+export * from "./Delivery";
+export * from "./Message";
+export * from "./Payment";
