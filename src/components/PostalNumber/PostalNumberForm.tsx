@@ -31,11 +31,7 @@ export const PostalNumberForm = () => {
           minLength={5}
           maxLength={6}
         />
-        <Button
-          type="submit"
-          variant="secondary"
-          className="bg-gray-300 text-white"
-        >
+        <Button type="submit" variant="primary">
           Visa
         </Button>
         <FeedbackDialog
