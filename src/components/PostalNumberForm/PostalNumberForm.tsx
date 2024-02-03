@@ -14,14 +14,15 @@ export const PostalNumberForm = () => {
       </p>
       <form
         action={formAction}
-        className="max-w-screen-sm mx-auto flex flex-row md:flex-row gap-3 justify-center p-2"
+        className="text-leaf-green max-w-screen-sm mx-auto flex flex-row md:flex-row gap-3 justify-center p-2"
       >
         <input
           id="#postalcode"
           name="postalnumber"
           className="pt-1 pl-2 w-full md:max-w-max"
           type="text"
-          placeholder="123 45"
+          placeholder="Postnummer"
+          //TODO: add client side validation
         />
         <FeedbackDialog outcome={outcome} />
       </form>

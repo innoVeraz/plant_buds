@@ -15,7 +15,7 @@ export const FeedbackDialog = ({ outcome }: Props) => {
   console.log(pending);
 
   return (
-    <Dialog.Root>
+    <Dialog.Root open={pending}>
       <Dialog.Trigger asChild>
         <Button type="submit" className="bg-gray-300 text-white">
           Visa
