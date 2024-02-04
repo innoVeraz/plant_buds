@@ -1,4 +1,4 @@
-export const Message = () => {
+export const Contact = () => {
   return (
     <div>
       <h3>Meddelande till våra buddies</h3>
