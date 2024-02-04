@@ -1,11 +1,14 @@
-import { Button as TailwindButton } from "@material-tailwind/react";
+import {
+  ButtonProps,
+  Button as TailwindButton,
+} from "@material-tailwind/react";
 
-type Props = {
+interface IButtonProps extends Omit<ButtonProps, "variant" | "ref"> {
   variant: "primary" | "secondary" | "checkout";
   children: string;
-};
+}
 
-const Button = ({ variant, children, ...props }: Props) => {
+const Button = ({ variant, children, ...props }: IButtonProps) => {
   if (variant === "primary") {
     return (
       <TailwindButton className="bg-leaf-green text-white" {...props}>
