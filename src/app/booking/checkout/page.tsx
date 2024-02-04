@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
-import { Message, Payment } from "@/components/Form";
+import { Contact, Payment } from "@/components/Form";
 import { Delivery } from "@/components/Form/Delivery";
 import { MainHeader } from "@/components/Header";
 
@@ -12,7 +12,7 @@ const Checkout = () => {
       <h3>Välkommen till kassan</h3>
       <form action="submit">
         <Delivery />
-        <Message />
+        <Contact />
         <Payment />
         <Button variant="checkout">BESTÄLL</Button>
       </form>
