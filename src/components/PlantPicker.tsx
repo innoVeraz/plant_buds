@@ -5,7 +5,14 @@ import { useShoppingCartStore } from "@/app/booking/store";
 const PlantPicker = () => {
   const cart = useShoppingCartStore();
   return (
-    <div className="flex">
+    <div className="flex flex-col">
+      <div>
+        <p>
+          Här väljer du upp till tio växter totalt som ska omplanteras. Vi tar
+          med oss allt material som behövs. Standardkruka är förvalt men i vår
+          krukshop kan du lägga till nya fina krukor som vi tar med vid besöket.
+        </p>
+      </div>
       <p>Väl antal plantor för omplantering</p>
       <button onClick={cart.decreasePlants}>-</button>
       <input

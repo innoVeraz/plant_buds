@@ -13,22 +13,27 @@ const Pots = ({ products }: Props) => {
   console.log(cart.pots);
 
   return (
-    <div>
+    <div className="grid grid-cols-4 p-2 font-thin">
       {products.map((product) => (
-        <div key={product.id}>
+        <div key={product.id} className="flex flex-col items-center p-2">
           <Image
+            className="object-cover max-h-100 w-full"
             src={product.img_url!}
-            alt="blue pot"
+            alt={product.description!}
             width={200}
             height={200}
           />
-          <div>{product.name}</div>
+          <div className="p-2 text-center">
+            <p>{product.name}</p>
+            <p>{product.description}</p>
+          </div>
           <button
+            className="mt-auto bg-blue-500 text-white p-2"
             onClick={() => {
-              cart.addPot(product.id);
+              cart.addPot(product);
             }}
           >
-            lägg till
+            Lägg till
           </button>
         </div>
       ))}
