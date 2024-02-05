@@ -16,7 +16,7 @@ const Checkout = () => {
           <Delivery />
           <Contact />
           <Payment />
-          <Button variant="checkout">BESTÄLL</Button>
+          <Button variant="black">BESTÄLL</Button>
         </form>
       </div>
     </div>

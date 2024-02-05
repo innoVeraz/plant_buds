@@ -9,15 +9,14 @@ const productsData = [
     img_url: "/products/bluepot.png",
   },
   {
-    name: "Liten Bambu",
-    description:
-      "En elegant planterare i marmorfinish, skapad för att addera stil till ditt gröna hörn. Designad för både inomhus- och utomhusbruk.",
+    name: "Vävd",
+    description: "Mindre kruka i bambu",
     quantity: 100,
     price: 150,
     img_url: "/products/bamboosmall.png",
   },
   {
-    name: "Stor Bambu",
+    name: "Natur",
     description:
       "En handgjord kruka av svenskt hantverk, perfekt för att odla dina favoritväxter.",
     quantity: 100,
@@ -34,28 +33,27 @@ const productsData = [
   {
     name: "Detalj",
     description:
-      "En lerkruka med inspiration från naturen, perfekt för att skapa en jordnära känsla i ditt hem. Handgjord med omsorg om detaljerna.",
+      "En lerkruka med inspiration från naturen, perfekt för att skapa en jordnära känsla",
     quantity: 100,
     price: 150,
     img_url: "/products/bluewhitepattern.png",
   },
   {
     name: "Pricken",
-    description:
-      "En kruka med doft av lavendel, perfekt för att skapa en avkopplande atmosfär i ditt hem. En praktisk och vacker plats för dina växter.",
+    description: "Keramikkruka med prickar",
     quantity: 100,
     price: 150,
     img_url: "/products/bluewhitespots.png",
   },
   {
-    name: "Stål",
+    name: "Stålis",
     description: "En avlång kruka i borstat stål",
     quantity: 100,
     price: 150,
     img_url: "/products/brushedsteeltall.png",
   },
   {
-    name: "Lera stor",
+    name: "Clay",
     description: "En stilren planterare i beige keramik",
     quantity: 100,
     price: 150,
@@ -83,21 +81,21 @@ const productsData = [
     img_url: "/products/coralswirl.png",
   },
   {
-    name: "Natur",
+    name: "Naturlig",
     description: "En naturfärgad keramikkruka",
     quantity: 100,
     price: 150,
     img_url: "/products/creambeigeceramic.png",
   },
   {
-    name: "Grå",
+    name: "Valen",
     description: "Gråfärgad slät keramik",
     quantity: 100,
     price: 150,
     img_url: "/products/grayceramic.png",
   },
   {
-    name: "Grå rund",
+    name: "Lillvalen",
     description: "Mindre gråfärgad och rundad keramikkruka",
     quantity: 100,
     price: 150,
@@ -139,7 +137,7 @@ const productsData = [
     img_url: "/products/lightteracottapatternbig.png",
   },
   {
-    name: "Ljus Terakotta",
+    name: "Rustik",
     description: "En handgjord ljust terakottafärgad kruka",
     quantity: 100,
     price: 150,
@@ -174,28 +172,28 @@ const productsData = [
     img_url: "/products/pinkswirlceramic.png",
   },
   {
-    name: "Rottingen liten",
+    name: "Träfin",
     description: "Liten kruka i rotting",
     quantity: 100,
     price: 150,
     img_url: "/products/rattanfootstandsmall.png",
   },
   {
-    name: "Rottingen oval",
+    name: "Rot",
     description: "Oval handgjord rottingkruka",
     quantity: 100,
     price: 150,
     img_url: "/products/rattanopenoval.png",
   },
   {
-    name: "Rottingen luftig",
+    name: "Rund Rot",
     description: "Rundad och öppen handgjord rottingkruka",
     quantity: 100,
     price: 150,
     img_url: "/products/rattanopenround.png",
   },
   {
-    name: "Rottingen rund",
+    name: "Stoff",
     description: "Rundad rottingen kruka",
     quantity: 100,
     price: 150,
@@ -209,7 +207,7 @@ const productsData = [
     img_url: "/products/ropebig.png",
   },
   {
-    name: "Repet virvel",
+    name: "Tord",
     description: "Mindre kruka i naturligt repmateria",
     quantity: 100,
     price: 150,
@@ -223,7 +221,7 @@ const productsData = [
     img_url: "/products/seafoamgreenflowers.png",
   },
   {
-    name: "Sjögräs geometrisk",
+    name: "Seaweed",
     description: "Grön keramikkruka med geometriskt mönster",
     quantity: 100,
     price: 150,
@@ -237,14 +235,14 @@ const productsData = [
     img_url: "/products/teracotta.png",
   },
   {
-    name: "Ljus Pelargon",
+    name: "Pall",
     description: "Ljust terrakottaröd mindre standardkruka",
     quantity: 100,
     price: 150,
     img_url: "/products/teracottalightsmall.png",
   },
   {
-    name: "Rund Pelargon",
+    name: "Arvet",
     description: "Ljust terrakottaröd standardkruka rundad",
     quantity: 100,
     price: 150,
@@ -272,7 +270,7 @@ const productsData = [
     img_url: "/products/wovenseagrassbig.png",
   },
   {
-    name: "Sjögräs liten",
+    name: "Snurrad",
     description: "",
     quantity: 100,
     price: 150,

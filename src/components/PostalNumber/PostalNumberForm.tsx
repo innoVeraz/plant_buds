@@ -31,7 +31,9 @@ export const PostalNumberForm = () => {
           minLength={5}
           maxLength={6}
         />
-        <Button variant="primary">Visa</Button>
+        <Button type="submit" variant="gray">
+          Visa
+        </Button>
         <FeedbackDialog
           outcome={outcome}
           open={feedbackDialogOpen}

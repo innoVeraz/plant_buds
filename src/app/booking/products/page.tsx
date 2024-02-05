@@ -1,7 +1,7 @@
 import prisma from "@/db";
 import { MainHeader } from "@/components/Header";
 import { BottomNav } from "@/components/Nav/BottomNav";
-import Pots from "@/components/Pots";
+import ProductCard from "@/components/ProductCard";
 import PlantPicker from "@/components/PlantPicker";
 
 async function getProducts() {
@@ -18,7 +18,7 @@ const Products = async () => {
         {/* <HowTo /> */}
       </div>
       <PlantPicker />
-      <Pots products={products} />
+      <ProductCard products={products} />
       <BottomNav prev="/" next="/booking/deliveryday" />
     </>
   );
