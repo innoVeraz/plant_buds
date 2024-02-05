@@ -1,15 +1,25 @@
+import { Slot } from "@/actions/getTimeSlots";
+import { products } from "@prisma/client";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
+type SelectedSlot = {
+  number: number;
+  date: Date;
+};
+
+type Pot = products & {
+  amount: number;
+};
+
 type State = {
   plants: number;
-  pots: {
-    id: number;
-    amount: number;
-  }[];
+  pots: Pot[];
+  slot: SelectedSlot | null;
   increasePlants: () => void;
   decreasePlants: () => void;
-  addPot: (id: number) => void;
+  addPot: (pot: products) => void;
+  setSlot: (slot: SelectedSlot) => void;
 };
 
 export const useShoppingCartStore = create<State>()(
@@ -17,23 +27,25 @@ export const useShoppingCartStore = create<State>()(
     (set) => ({
       plants: 0,
       pots: [],
+      slot: null,
       increasePlants: () => set((state) => ({ plants: state.plants + 1 })),
       decreasePlants: () => set((state) => ({ plants: state.plants - 1 })),
-      addPot: (id) =>
+      addPot: (pot) =>
         set((state) => {
           let pots = structuredClone(state.pots);
-          const index = state.pots.findIndex((pot) => pot.id === id);
+          const index = state.pots.findIndex((x) => x.id === pot.id);
           if (index !== -1) {
             pots = state.pots.map((item, i) =>
               i === index ? { ...item, amount: item.amount + 1 } : item
             );
           } else {
-            pots.push({ id, amount: 1 });
+            pots.push({ ...pot, amount: 1 });
           }
           return {
             pots,
           };
         }),
+      setSlot: (slot) => set((state) => ({ slot })),
     }),
     { name: "shopping-cart" }
   )

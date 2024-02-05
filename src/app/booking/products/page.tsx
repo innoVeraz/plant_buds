@@ -10,7 +10,6 @@ async function getProducts() {
 
 const Products = async () => {
   const products = await getProducts();
-  console.log(products);
 
   return (
     <>
@@ -19,10 +18,8 @@ const Products = async () => {
         {/* <HowTo /> */}
       </div>
       <PlantPicker />
-
       <Pots products={products} />
-
-      <BottomNav prev="/" next="/booking/date" />
+      <BottomNav prev="/" next="/booking/deliveryday" />
     </>
   );
 };
