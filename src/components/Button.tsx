@@ -4,7 +4,7 @@ import {
 } from "@material-tailwind/react";
 
 interface IButtonProps extends Omit<ButtonProps, "variant" | "ref"> {
-  variant: "primary" | "secondary" | "checkout";
+  variant: "primary" | "secondary" | "black" | "gray";
   children: string;
 }
 
@@ -23,10 +23,20 @@ const Button = ({ variant, children, ...props }: IButtonProps) => {
       </TailwindButton>
     );
   }
-  if (variant === "checkout") {
+  if (variant === "black") {
     return (
       <TailwindButton
         className="bg-black text-white w-4/12 p-1 text-lg font-normal"
+        {...props}
+      >
+        {children}
+      </TailwindButton>
+    );
+  }
+  if (variant === "gray") {
+    return (
+      <TailwindButton
+        className=" bg-gray-400 text-white  p-2  font-normal"
         {...props}
       >
         {children}

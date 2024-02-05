@@ -1,4 +1,3 @@
-import { Slot } from "@/actions/getTimeSlots";
 import { products } from "@prisma/client";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
