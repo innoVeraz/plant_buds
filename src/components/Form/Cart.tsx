@@ -4,9 +4,9 @@ export const Cart = () => {
   const cart = useShoppingCartStore();
 
   return (
-    <div>
-      <p>omplantering {cart.plants}</p>
-      <p>Tid {cart.slot?.date.toLocaleDateString()}</p>
+    <div className="">
+      <p>Omplantering {cart.plants}</p>
+      <p>Tid/Datum {cart.slot?.date.toLocaleDateString()}</p>
       <div>
         {cart.pots.map((pot) => (
           <>{pot.id}</>

@@ -13,11 +13,12 @@ const Products = async () => {
 
   return (
     <>
-      <div className="bg-acc-lg">
-        <MainHeader />
-        {/* <HowTo /> */}
+      <div className="bg-acc-lg text-dark-forest">
+        <div className="text-4xl text-center font-thin pt-10">
+          <h1>Krukor</h1>
+        </div>
       </div>
-      <PlantPicker />
+      {/* <PlantPicker /> */}
       <ProductCard products={products} />
       <BottomNav prev="/" next="/booking/deliveryday" />
     </>

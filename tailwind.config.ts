@@ -13,6 +13,8 @@ module.exports = withMT({
         "light-green": "#F4F3ED",
         "dark-forest": "#3E4B2D",
         "leaf-green": "#5F7347",
+        "pink-orange": "#FF9476",
+        "mellow-gray": "#BCBAAD",
       },
       keyframes: {
         // overlayShow: {
