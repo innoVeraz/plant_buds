@@ -11,19 +11,21 @@ export const PostalNumberForm = () => {
   const [feedbackDialogOpen, setFeedbackDialogOpen] = useState(false);
 
   return (
-    <div className="bg-light-green p-8 font-thin">
-      <p className="text-3xl text-center">Se om vi finns i ditt område!</p>
+    <div className="bg-light-green font-thin md:p-6 lg:p-8 rounded-md">
+      <p className=" font-normal text-xl md:text-3xl text-center pt-8 pb-4">
+        Se om vi finns i ditt område!
+      </p>
       <form
         action={(formData) => {
           formAction(formData);
           setFeedbackDialogOpen(true);
         }}
-        className="text-leaf-green max-w-screen-sm mx-auto flex flex-row md:flex-row gap-3 justify-center p-2"
+        className="text-leaf-green max-w-screen-sm mx-auto flex flex-row md:flex-row gap-3 justify-center pb-8"
       >
         <input
           id="#postalcode"
           name="postalnumber"
-          className="pt-1 pl-2 w-full md:max-w-max"
+          className="pt-1 pl-2 w-56 text-mellow-gray font-medium"
           type="text"
           placeholder="Postnummer"
           //TODO: add client side validation

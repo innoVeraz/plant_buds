@@ -3,6 +3,7 @@
 import { useShoppingCartStore } from "@/app/booking/store";
 import { products } from "@prisma/client";
 import Image from "next/image";
+import Button from "./Button";
 
 type Props = {
   products: products[];
@@ -13,31 +14,39 @@ const ProductCard = ({ products }: Props) => {
   console.log(cart.pots);
 
   return (
-    <div className="grid grid-cols-4 p-8 gap-8 font-thin">
+    <div className="grid grid-cols-4 p-8 gap-4 font-thin">
       {products.map((product) => (
         <div
           key={product.id}
-          className="flex flex-col items-center  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+          className="flex flex-col justify-between items-center  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
         >
-          <Image
-            className="object-cover max-h-100 w-full"
-            src={product.img_url!}
-            alt={product.description!}
-            width={200}
-            height={200}
-          />
-          <div className="p-2 text-center">
-            <p>{product.name}</p>
-            <p>{product.description}</p>
+          <div className="text-center">
+            <Image
+              className="object-cover max-h-100 w-full"
+              src={product.img_url!}
+              alt={product.description!}
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }}
+            />
+            <p className="p-2 font-normal bg-light-green">{product.name}</p>
+            <p className="p-2 text-sm">{product.description}</p>
           </div>
-          <button
-            className="mt-auto mb-8 bg-blue-800 text-white p-2"
-            onClick={() => {
-              cart.addPot(product);
-            }}
-          >
-            Lägg till
-          </button>
+          <div className="text-center pb-4">
+            <div>
+              <p>{product.price} kr</p>
+              <Button
+                variant="primary"
+                className="p-2 mt-2"
+                onClick={() => {
+                  cart.addPot(product);
+                }}
+              >
+                Lägg till
+              </Button>
+            </div>
+          </div>
         </div>
       ))}
     </div>

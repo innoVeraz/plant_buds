@@ -5,39 +5,34 @@ import plantbusImg from "../../public/heroImg.svg";
 import womanImg from "../../public/woman-planting.svg";
 import bugImg from "../../public/bug.svg";
 
-import { OurService, BugService } from "@/components/Text";
-import { MainHeader } from "@/components/Header/MainHeader";
-import { PostalNumberForm } from "@/components/PostalNumber";
 import Link from "next/link";
-import Footer from "@/components/Footer";
+import { OurService, BugService } from "@/components/Text";
+import { PostalNumberForm } from "@/components/PostalNumber";
 import Button from "@/components/Button";
-import { MenuNav } from "@/components/Nav";
 
 const Home = () => {
   return (
     <div className="text-dark-forest">
-      <MainHeader />
-      <MenuNav />
-
       <div className="flex flex-col gap-4">
-        <section>
+        <div id="postalnumber" className="md:relative">
           <Image src={plantbusImg} alt="a truck filled with flowers" />
-          <PostalNumberForm />
-
-          <Image src={womanImg} alt="a woman planting indoor plants" />
-
+          <div className="md:absolute md:top-[40%] md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
+            <PostalNumberForm />
+          </div>
+        </div>
+        <h1 className="text-4xl text-center font-thin md:py-4 md:text-8xl ">
+          Omplantering
+        </h1>
+        <div className="md:grid grid-cols-2">
+          <Image
+            className="object-cover w-full h-full"
+            src={womanImg}
+            alt="a woman planting indoor plants"
+          />
           <OurService />
-        </section>
-        <section className="">
-          <h1 className="text-dark-forest text-6xl font-extralight ">Ohyra?</h1>
-          <Image src={bugImg} alt="image of a cartoon bug in a plant pot" />
-
           <BugService />
-          <Link href="#postalcode">
-            <Button variant="primary">Se om vi kan komma hem till dig!</Button>
-          </Link>
-        </section>
-        <Footer />
+          <Image src={bugImg} alt="image of a cartoon bug in a plant pot" />
+        </div>
       </div>
     </div>
   );

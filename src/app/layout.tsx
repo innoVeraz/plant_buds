@@ -1,6 +1,8 @@
+import Footer from "@/components/Footer";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Manjari } from "next/font/google";
+import { MainHeader } from "@/components/Header";
 
 const font = Manjari({ weight: ["100", "400", "700"], subsets: ["latin"] });
 
@@ -16,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="se">
-      <body className={`${font.className}`}>{children}</body>
+      <body className={`${font.className} `}>
+        <MainHeader />
+        <main className="pt-[165px] max-w-5xl m-auto">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

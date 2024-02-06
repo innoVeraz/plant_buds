@@ -9,8 +9,7 @@ const Checkout = () => {
   return (
     <div>
       <div className="max-w-screen-lg m-auto">
-        <MainHeader />
-        <h3>Välkommen till kassan</h3>
+        <h3 className="text-3xl font-thin">Välkommen till kassan</h3>
         <form action="submit">
           <Cart />
           <Delivery />

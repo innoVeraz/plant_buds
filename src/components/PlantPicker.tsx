@@ -8,14 +8,7 @@ const PlantPicker = () => {
   const decreasePlants = useShoppingCartStore((state) => state.decreasePlants);
   const increasePlants = useShoppingCartStore((state) => state.increasePlants);
   return (
-    <div className="flex flex-col">
-      <div>
-        <p>
-          Här väljer du upp till tio växter totalt som ska omplanteras. Vi tar
-          med oss allt material som behövs. Standardkruka är förvalt men i vår
-          krukshop kan du lägga till nya fina krukor som vi tar med vid besöket.
-        </p>
-      </div>
+    <div>
       <p>Väl antal plantor för omplantering</p>
       <button onClick={decreasePlants}>-</button>
       <input

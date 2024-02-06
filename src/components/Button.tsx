@@ -36,7 +36,7 @@ const Button = ({ variant, children, ...props }: IButtonProps) => {
   if (variant === "gray") {
     return (
       <TailwindButton
-        className=" bg-gray-400 text-white  p-2  font-normal"
+        className=" bg-mellow-gray text-white md:text-xl md:px-8  py-1 font-normal"
         {...props}
       >
         {children}
