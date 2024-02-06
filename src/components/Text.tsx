@@ -3,20 +3,24 @@ import Button from "./Button";
 
 export const OurService = () => {
   return (
-    <div className="text-dark-forest p-4  text-lg md:px-8 md:font-thin md:text-xl">
+    <div className="text-dark-forest p-4 text-lg md:px-8 md:font-thin">
       <p>
-        <p>
-          Att plantera om inomhusväxter kan kräva både tid, material och
-          kunskap.
-        </p>
-        <p className="font-bold py-3">Vi kan göra allt det där åt dig!</p>
+        Att plantera om inomhusväxter kan kräva både tid, material och kunskap.
+      </p>
+      <p className="font-bold py-3">Vi kan göra allt det där åt dig!</p>
+      <p>
         Du väljer en passande tid och så kommer våra kunniga florister hem till
-        dig och planterar om. <br />
-        <br />
+        dig och planterar om.
+      </p>
+      <br />
+      <p>
         De planteras om i antingen en kruka du redan har med ny jord och näring,
-        eller ger dem mer plats att växa i en större kruka. <br />
-        <br /> Vi har många fina krukor i vår shop som du kan välja att lägga
-        till i samband med bokningen, vi tar med dem till omplanteringsdagen.
+        eller ger dem mer plats att växa i en större kruka.
+      </p>
+      <br />
+      <p>
+        Vi har många fina krukor i vår shop som du kan välja att lägga till i
+        samband med bokningen, vi tar med dem till omplanteringsdagen.
       </p>
       <div className="flex justify-center py-8">
         <Link href="#postalnumber">
@@ -30,11 +34,11 @@ export const OurService = () => {
 export const BugService = () => {
   return (
     <div className="text-dark-forest p-4 md:py-8">
-      <h1 className="font-thin text-4xl text-center p-4 md:text-8xl">Ohyra?</h1>
+      <h1 className="text-4xl text-center font-thin p-4 md:text-8xl">Ohyra?</h1>
       <h3 className="pb-4 text-center font-bold md:text-2xl">
         Har du fått oinbjudna gäster?
       </h3>
-      <p className="md:text-xl sm:text-sm">
+      <p className="text-xl md:font-thin">
         Vi identifierar och hjälper dig bli fri från ohyran. Vid behov avlägsnar
         vi plantorna åt dig för att se om vi kan rädda dem (beroende på hur
         stort angreppet är). <br />

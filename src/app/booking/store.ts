@@ -18,6 +18,7 @@ type State = {
   increasePlants: () => void;
   decreasePlants: () => void;
   addPot: (pot: products) => void;
+  removePot: (potId: number) => void;
   setSlot: (slot: SelectedSlot) => void;
 };
 
@@ -44,6 +45,10 @@ export const useShoppingCartStore = create<State>()(
             pots,
           };
         }),
+      removePot: (potId) =>
+        set((state) => ({
+          pots: state.pots.filter((pot) => pot.id !== potId),
+        })),
       setSlot: (slot) => set((state) => ({ slot })),
     }),
     { name: "shopping-cart" }

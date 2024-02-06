@@ -36,6 +36,11 @@ RUN --mount=type=secret,id=DATABASE_URL \
     DATABASE_URL="$(cat /run/secrets/DATABASE_URL)" \
     npx prisma migrate deploy
 
+# Seed database
+RUN --mount=type=secret,id=DATABASE_URL \
+    DATABASE_URL="$(cat /run/secrets/DATABASE_URL)" \
+    npx prisma db seed
+
 # Build application
 RUN --mount=type=secret,id=DATABASE_URL \
     DATABASE_URL="$(cat /run/secrets/DATABASE_URL)" \

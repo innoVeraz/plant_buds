@@ -13,16 +13,22 @@ import Button from "@/components/Button";
 const Home = () => {
   return (
     <div className="text-dark-forest">
-      <div className="flex flex-col gap-4">
-        <div id="postalnumber" className="md:relative">
+      <div id="postalnumber" className="flex flex-col gap-4">
+        <div className="md:relative">
           <Image src={plantbusImg} alt="a truck filled with flowers" />
-          <div className="md:absolute md:top-[40%] md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
+          <div className=" md:absolute md:top-[40%] md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
             <PostalNumberForm />
           </div>
+          {/* <div id="replantscroll" className="h-40 "></div> */}
         </div>
-        <h1 className="text-4xl text-center font-thin md:py-4 md:text-8xl ">
+
+        <h1
+          id="replantscroll"
+          className="text-4xl text-center font-thin md:py-4 md:text-8xl "
+        >
           Omplantering
         </h1>
+
         <div className="md:grid grid-cols-2">
           <Image
             className="object-cover w-full h-full"

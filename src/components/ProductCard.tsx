@@ -14,7 +14,7 @@ const ProductCard = ({ products }: Props) => {
   console.log(cart.pots);
 
   return (
-    <div className="grid grid-cols-4 p-8 gap-4 font-thin">
+    <div className="grid grid-cols-2 md:grid-cols-4 p-8 gap-4 font-thin">
       {products.map((product) => (
         <div
           key={product.id}
@@ -43,7 +43,7 @@ const ProductCard = ({ products }: Props) => {
                   cart.addPot(product);
                 }}
               >
-                Lägg till
+                Lägg i varukorgen
               </Button>
             </div>
           </div>

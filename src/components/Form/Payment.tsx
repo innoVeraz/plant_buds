@@ -5,11 +5,9 @@ export const Payment = () => {
     <div>
       <div>
         <div>
-          <label
-            htmlFor="kortnamn"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          ></label>
           <input
+            aria-label="namn på kortet"
+            name="cardname"
             type="text"
             id="kortnamn"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -17,13 +15,10 @@ export const Payment = () => {
             required
           />
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap md:grid-cols-2">
           <div>
-            <label
-              htmlFor="kortnummer"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            ></label>
             <input
+              aria-label="kortnummer"
               name="cardnumber"
               autoComplete="cc-number"
               type="text"
@@ -37,11 +32,9 @@ export const Payment = () => {
 
         <div className="grid gap-6 mb-6 md:grid-cols-2">
           <div>
-            <label
-              htmlFor="giltigt"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            ></label>
             <input
+              aria-label="giltigt till mån/år"
+              name="valid"
               type="text"
               id="giltigt"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -50,14 +43,12 @@ export const Payment = () => {
             />
           </div>
           <div>
-            <label
-              htmlFor="CVC"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            ></label>
             <input
+              aria-label="cvc"
+              name="cvc"
               type="text"
               id="CVC"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  w-40 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="CVC/CVV"
               required
             />

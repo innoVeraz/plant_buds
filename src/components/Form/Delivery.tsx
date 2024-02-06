@@ -4,11 +4,9 @@ export const Delivery = () => {
       <div>
         <div className="grid gap-6 mb-6 md:grid-cols-2">
           <div>
-            <label
-              htmlFor="first_name"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            ></label>
             <input
+              aria-label="förnamn"
+              name="firstname"
               type="text"
               id="first_name"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -17,11 +15,9 @@ export const Delivery = () => {
             />
           </div>
           <div>
-            <label
-              htmlFor="last_name"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            ></label>
             <input
+              aria-label="efternamn"
+              name="lastname"
               type="text"
               id="last_name"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -32,11 +28,9 @@ export const Delivery = () => {
         </div>
 
         <div>
-          <label
-            htmlFor="Gatuadress"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          ></label>
           <input
+            aria-label="gatuadress"
+            name="streetname"
             type="text"
             id="Gatuadress"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -46,11 +40,9 @@ export const Delivery = () => {
         </div>
         <div className="grid gap-6 mb-6 md:grid-cols-2">
           <div>
-            <label
-              htmlFor="Postnummer"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            ></label>
             <input
+              aria-label="postnummer"
+              name="postalnumber"
               type="text"
               id="Postnummer"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -59,11 +51,9 @@ export const Delivery = () => {
             />
           </div>
           <div>
-            <label
-              htmlFor="Stad"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            ></label>
             <input
+              aria-label="stad"
+              name="city"
               type="text"
               id="Stad"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -74,25 +64,20 @@ export const Delivery = () => {
         </div>
       </div>
       <div>
-        <label
-          htmlFor="Mobiltelefon"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        ></label>
         <input
+          aria-label="mobiltelefonnummer"
+          name="phonenumber"
           type="tel"
           id="Mobiltelefon"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Mobiltelefon (+46)70 000 00 00"
-          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
           required
         />
       </div>
       <div className="mb-6">
-        <label
-          htmlFor="email"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        ></label>
         <input
+          aria-label="e-postadress"
+          name="email"
           type="email"
           id="email"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
