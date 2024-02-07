@@ -20,7 +20,10 @@ export const Cart = () => {
   return (
     <div className=" flex flex-col gap-4 bg-light-green p-8 text-sm text-dark-forest md:rounded-lg">
       {/* <p>Omplantering {cart.plants}</p> */}
-      {/* <p>Datum: {cart.slot?.date.toLocaleDateString()}</p> */}
+      <p>Datum: {cart.slot?.date?.toLocaleDateString?.()}</p>
+      <p>Tid: {getSlotTime(cart.slot?.number!)}</p>
+      <input type="hidden" name="date" value={cart.slot?.date.toISOString()} />
+      <input type="hidden" name="slot" value={cart.slot?.number} />
 
       {cart.pots.map((pot) => (
         <div className="grid grid-cols-5 items-center" key={pot.id}>
@@ -55,3 +58,16 @@ export const Cart = () => {
     </div>
   );
 };
+
+export function getSlotTime(slot: number) {
+  switch (slot) {
+    case 1:
+      return "08:00 - 12:00";
+    case 2:
+      return "13:00 - 17:00";
+    case 3:
+      return "18:00 - 22:00";
+    default:
+      break;
+  }
+}

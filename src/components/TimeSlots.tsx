@@ -7,14 +7,15 @@ type Props = {
 };
 
 const TimeSlots = ({ slots, date }: Props) => {
-  const cart = useShoppingCartStore();
+  const setSlot = useShoppingCartStore((state) => state.setSlot);
+  const slot = useShoppingCartStore((state) => state.slot);
 
   return (
     <div>
       {slots.map((slot) => (
         <div
           onClick={() => {
-            cart.setSlot({ date, number: slot.number });
+            setSlot({ date, number: slot.number });
           }}
           key={slot.time}
         >

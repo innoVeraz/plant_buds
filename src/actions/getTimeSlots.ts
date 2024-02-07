@@ -30,7 +30,7 @@ export const getTimeSlots = async (timeStamp: number) => {
       number: 2,
     },
     {
-      time: "18:00 - 21:00",
+      time: "18:00 - 22:00",
       available: true,
       number: 3,
     },

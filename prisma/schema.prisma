@@ -23,8 +23,8 @@ model bookings {
   address_id        Int?
   user_id           Int?
   plant_amount      Int
-  time              DateTime?           @db.Timestamp(6)
-  date              DateTime?           @db.Date
+  slot              Int
+  date              DateTime            @db.Timestamp()
   status            booking_status?
   created_at        DateTime?           @default(now()) @db.Timestamp(6)
   address           address?            @relation(fields: [address_id], references: [id], onDelete: NoAction, onUpdate: NoAction)

@@ -4,13 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 const CartIcon = () => {
-  const pots = useShoppingCartStore((state) => state.pots);
-  const amount = pots.reduce((prev, cur) => prev + cur.amount, 0);
+  const cart = useShoppingCartStore();
   return (
     <Link href="/booking/checkout">
       <div>
         <FontAwesomeIcon
-          key={amount}
+          key={JSON.stringify(cart)}
           width={30}
           className="md:text-xl mb-8 opacity-80 cursor-pointer pulse-icon"
           icon={faBagShopping}

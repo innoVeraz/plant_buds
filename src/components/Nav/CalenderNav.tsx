@@ -33,13 +33,21 @@ export const CalenderNav = ({
   };
 
   const nextDayClick = () => {
-    const nextDay = new Date(date);
+    const nextDay = new Date(
+      date.getFullYear(),
+      date.getMonth(),
+      date.getDate()
+    );
     nextDay.setDate(date.getDate() + 1);
     setDate(nextDay);
   };
 
   const PrevDayClick = () => {
-    const prevDay = new Date(date);
+    const prevDay = new Date(
+      date.getFullYear(),
+      date.getMonth(),
+      date.getDate()
+    );
     prevDay.setDate(date.getDate() - 1);
     setDate(prevDay);
   };
@@ -71,7 +79,15 @@ export const CalenderNav = ({
       {isCalenderOpen && (
         <div className="flex justify-center">
           <Calendar
-            onChange={(date) => setDate(date as Date)}
+            onChange={(date) => {
+              setDate(
+                new Date(
+                  (date as Date).getFullYear(),
+                  (date as Date).getMonth(),
+                  (date as Date).getDate()
+                )
+              );
+            }}
             value={date}
             className="text-dark-forest rounded-xl mt-4"
           />

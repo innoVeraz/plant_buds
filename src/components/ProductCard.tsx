@@ -12,7 +12,7 @@ type Props = {
 
 const ProductCard = ({ partialProducts }: Props) => {
   const cart = useShoppingCartStore();
-  console.log(cart.pots);
+  console.log(cart);
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 p-8 gap-4 font-thin ">

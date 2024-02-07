@@ -1,14 +1,17 @@
 "use server";
 
-import { booking_status, bookings } from "@prisma/client";
 import prisma from "@/db";
 import { z } from "zod";
 
-const userSchema = z.object({ email: z.string() });
+const userSchema = z.object({ email: z.string().email() });
 const addressSchema = z.object({
   street: z.string(),
   postalcode: z.string(),
   city: z.string(),
+});
+const bookingSchema = z.object({
+  date: z.string().transform((x) => new Date(x)),
+  slot: z.string().transform(Number),
 });
 
 export const createOrder = async (formData: FormData) => {
@@ -26,6 +29,10 @@ export const createOrder = async (formData: FormData) => {
       products_id: Number(id),
       amount: Number(amount),
     };
+  });
+  const bookingModel = bookingSchema.parse({
+    date: formData.get("date"),
+    slot: formData.get("slot"),
   });
   const user = await prisma.users.upsert({
     include: { address: true },
@@ -54,7 +61,8 @@ export const createOrder = async (formData: FormData) => {
       plant_amount: 1,
       address_id: user.address[0].id,
       user_id: user.id,
-      // add date and slot
+      date: bookingModel.date.toISOString(),
+      slot: bookingModel.slot,
       status: "created",
       bookings_products: {
         createMany: {
