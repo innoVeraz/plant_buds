@@ -1,7 +1,6 @@
 import Products from "@/app/booking/products/page";
 import { useShoppingCartStore } from "@/app/booking/store";
 import Image from "next/image";
-import Button from "../Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,7 +18,7 @@ export const Cart = () => {
   };
 
   return (
-    <div className=" flex flex-col gap-4 bg-light-green p-8 my-8 text-dark-forest">
+    <div className=" flex flex-col gap-4 bg-light-green p-8 text-sm text-dark-forest md:rounded-lg">
       {/* <p>Omplantering {cart.plants}</p> */}
       {/* <p>Datum: {cart.slot?.date.toLocaleDateString()}</p> */}
 
@@ -35,7 +34,7 @@ export const Cart = () => {
           </div>
           <div>{pot.name}</div>
           <div>{pot.amount} st</div>
-          <div>à {pot.price}kr</div>
+          <div>{pot.price}kr</div>
           <span>
             <FontAwesomeIcon
               onClick={() => cart.removePot(pot.id)}
@@ -51,7 +50,7 @@ export const Cart = () => {
         </div>
       ))}
       <div>
-        <p>Totalt: {totalAmount()} kr</p>
+        <p className="font-bold">Totalt att betala: {totalAmount()} kr</p>
       </div>
     </div>
   );

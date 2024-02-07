@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export const OurService = () => {
   return (
-    <div className="text-dark-forest p-4 text-lg md:px-8 md:font-thin">
+    <div className="p-4 md:px-8 md:font-thin md:text-lg">
       <p>
         Att plantera om inomhusväxter kan kräva både tid, material och kunskap.
       </p>
@@ -33,34 +33,18 @@ export const OurService = () => {
 
 export const BugService = () => {
   return (
-    <div className="text-dark-forest p-4 md:py-8">
-      <h1 className="text-4xl text-center font-thin p-4 md:text-8xl">Ohyra?</h1>
-      <h3 className="pb-4 text-center font-bold md:text-2xl">
+    <div className="md:py-8">
+      <h1 className="text-4xl font-thin md:py-4 md:text-8xl">Ohyra?</h1>
+      <h3 className="pb-4 text-center text-xl md:text-2xl">
         Har du fått oinbjudna gäster?
       </h3>
-      <p className="text-xl md:font-thin">
+      <p className="md:text-lg md:font-thin md:pr-8">
         Vi identifierar och hjälper dig bli fri från ohyran. Vid behov avlägsnar
         vi plantorna åt dig för att se om vi kan rädda dem (beroende på hur
         stort angreppet är). <br />
         <br />
         Du får information och kunskap om hur du tar hand om angreppet på egen
         hand, produkter för behandling kan köpas direkt av våra florister.
-      </p>
-    </div>
-  );
-};
-
-export const HowTo = () => {
-  return (
-    <div>
-      <h3>Välj plantor och krukor</h3>
-      <p>
-        Välj det antal plantor du önskar få omplanterade, upp till 10 st totalt.
-        Omplanteringen sker till en baskruka i ekologisk återvunnen plast och
-        kostar 25kr till de mindre plantorna och 50kr till de större. Vi har
-        även ett hundratal fina krukor i vår shop att beställa. OBS: Det går
-        endast att beställa krukor i samband med en omplantering, krukorna tas
-        med till ditt bokade omplanteringstillfälle.
       </p>
     </div>
   );

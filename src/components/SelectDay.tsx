@@ -24,7 +24,9 @@ export const SelectDay = ({ initialSlots }: Props) => {
   return (
     <>
       <CalenderNav date={date} setDate={setDate} />
-      <TimeSlots date={date} slots={slots} />
+      <div className="text-center">
+        <TimeSlots date={date} slots={slots} />
+      </div>
     </>
   );
 };

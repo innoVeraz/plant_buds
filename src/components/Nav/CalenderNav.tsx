@@ -10,7 +10,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
-type Props = {
+export type Props = {
   locale?: string;
   formatOptions?: Intl.DateTimeFormatOptions;
   date: Date;
@@ -32,16 +32,16 @@ export const CalenderNav = ({
     setIsCalenderOpen(!isCalenderOpen);
   };
 
-  const toFuture = () => {
+  const nextDayClick = () => {
     const nextDay = new Date(date);
     nextDay.setDate(date.getDate() + 1);
     setDate(nextDay);
   };
 
-  const toPast = () => {
-    const nextDay = new Date(date);
-    nextDay.setDate(date.getDate() - 1);
-    setDate(nextDay);
+  const PrevDayClick = () => {
+    const prevDay = new Date(date);
+    prevDay.setDate(date.getDate() - 1);
+    setDate(prevDay);
   };
   const formattedDate = date.toLocaleDateString(locale || "sv-SE", {
     weekday: "long",
@@ -50,11 +50,11 @@ export const CalenderNav = ({
 
   return (
     <div>
-      <div className="flex gap-2 h-10 bg-leaf-green justify-center items-center text-white font-thin">
+      <div className="flex gap-2 justify-center items-center h-10 mt-4  font-thin  ">
         <div>
           <ChevronLeftIcon
-            onClick={toPast}
-            className="mr-10 mb-1 w-8 h-8 cursor-pointer"
+            onClick={PrevDayClick}
+            className="mr-20 mb-1 w-8 h-8 cursor-pointer"
           />
         </div>
         <p className="text-xl">{formattedDate}</p>
@@ -64,8 +64,8 @@ export const CalenderNav = ({
         />
 
         <ChevronRightIcon
-          onClick={toFuture}
-          className="ml-10 mb-1 w-8 h-8 cursor-pointer"
+          onClick={nextDayClick}
+          className="ml-20 mb-1 w-8 h-8 cursor-pointer"
         />
       </div>
       {isCalenderOpen && (
@@ -73,7 +73,7 @@ export const CalenderNav = ({
           <Calendar
             onChange={(date) => setDate(date as Date)}
             value={date}
-            className="text-dark-forest rounded-xl border-slate-200"
+            className="text-dark-forest rounded-xl mt-4"
           />
         </div>
       )}

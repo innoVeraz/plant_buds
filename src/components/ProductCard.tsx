@@ -6,16 +6,17 @@ import Image from "next/image";
 import Button from "./Button";
 
 type Props = {
-  products: products[];
+  // products: products[];
+  partialProducts: products[];
 };
 
-const ProductCard = ({ products }: Props) => {
+const ProductCard = ({ partialProducts }: Props) => {
   const cart = useShoppingCartStore();
   console.log(cart.pots);
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 p-8 gap-4 font-thin">
-      {products.map((product) => (
+    <div className="grid grid-cols-2 md:grid-cols-4 p-8 gap-4 font-thin ">
+      {partialProducts.map((product) => (
         <div
           key={product.id}
           className="flex flex-col justify-between items-center  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"

@@ -35,7 +35,7 @@ model bookings {
 model bookings_products {
   bookings_id Int
   products_id Int
-  quantity    Int
+  amount      Int
   bookings    bookings @relation(fields: [bookings_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
   products    products @relation(fields: [products_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
 
@@ -54,7 +54,7 @@ model products {
 
 model users {
   id         Int        @id @default(autoincrement())
-  username   String?    @db.VarChar
+  email      String?    @unique @db.VarChar
   role       role?
   created_at DateTime?  @default(now()) @db.Timestamp(6)
   address    address[]

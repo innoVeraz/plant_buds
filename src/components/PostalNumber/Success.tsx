@@ -17,7 +17,7 @@ export const Success = () => {
       </div>
       <div className="flex justify-center pb-8">
         <Dialog.Close asChild>
-          <Link href="/booking/appointment">
+          <Link href="/booking/products">
             <Button variant="primary">Gå vidare till bokning</Button>
           </Link>
         </Dialog.Close>

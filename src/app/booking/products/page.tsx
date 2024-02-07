@@ -1,36 +1,46 @@
 import prisma from "@/db";
-import { Header } from "@/components/Header";
 
 import ProductCard from "@/components/ProductCard";
-import PlantPicker from "@/components/PlantPicker";
 import { getTimeSlots } from "@/actions/getTimeSlots";
 import { BottomNav } from "@/components/Nav";
 import { SelectDay } from "@/components/SelectDay";
+import { PostalNumberForm } from "@/components/PostalNumber";
 
 async function getProducts() {
   return await prisma?.products.findMany();
 }
 
+async function getPartialProducts() {
+  const partialProducts = await prisma?.products.findMany({
+    take: 4,
+  });
+  return partialProducts;
+}
+
 const Products = async () => {
-  const [products, initialSlots] = await Promise.all([
+  const [products, initialSlots, partialProducts] = await Promise.all([
     getProducts(),
     getTimeSlots(Date.now()),
+    getPartialProducts(),
   ]);
 
   return (
-    <>
-      <div className="pb-20mt-10 mb-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
+    <div>
+      <h2 className="text-3xl text-center font-thin pt-10">Bokning</h2>
+      <div className="pb-20 mt-10 mb-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
+        <PostalNumberForm />
+        <h3 className="text-2xl text-center font-thin pt-10">
+          Välj dag och tid
+        </h3>
         <SelectDay initialSlots={initialSlots} />
       </div>
-      <div className="bg-acc-lg text-dark-forest">
-        <div className="text-4xl text-center font-thin pt-10">
-          <h1>Krukor</h1>
-        </div>
+
+      <h2 className="text-3xl text-center font-thin pt-10">Lägg till krukor</h2>
+      <div className="pb-20 mt-10 mb-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
+        <ProductCard partialProducts={partialProducts} />
+        <BottomNav prev="/" next="/booking/checkout" />
       </div>
-      {/* <PlantPicker /> */}
-      <ProductCard products={products} />
-      <BottomNav prev="/" next="/booking/deliveryday" />
-    </>
+    </div>
   );
 };
 export default Products;

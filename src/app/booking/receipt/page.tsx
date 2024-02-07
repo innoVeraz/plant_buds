@@ -1,14 +1,27 @@
 import Image from "next/image";
+import confetti from "../../../../public/confettibg.png";
 
 const page = () => {
   return (
-    <div>
-      <h1>Tack {"order.name"} för din beställning!</h1>
-      {/* <Image></Image> */}
-      <h3>
-        En bekräftelse med beställningsuppgifter skickas till
-        {"order.email"}
-      </h3>
+    <div className="relative min-h-screen bg-white mt-10">
+      <Image
+        src={confetti}
+        alt="blommor mot en grön bakgrund"
+        // layout="fill"
+        objectFit="cover"
+        className="rounded-xl m-auto"
+        height={700}
+        width={700}
+      />
+      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+        <h1 className="text-4xl mb-4 p-8 rounded-xl bg-opacity-70 bg-white opacity-90 backdrop-filter backdrop-blur-lg inline-block ">
+          Tack för din beställning!
+        </h1>
+        <h3 className="text-lg mt-4 bg-white opacity-90 p-4 rounded-xl">
+          En bekräftelse med beställningsuppgifter skickas till din angivna
+          e-postadress
+        </h3>
+      </div>
     </div>
   );
 };
