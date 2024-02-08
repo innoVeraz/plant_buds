@@ -3,6 +3,7 @@ import { useShoppingCartStore } from "@/app/booking/store";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import DeleteIcon from "../DeleteIcon";
 
 export const Cart = () => {
   const cart = useShoppingCartStore();
@@ -18,20 +19,14 @@ export const Cart = () => {
   };
 
   return (
-    <div className="flex flex-col gap-1 bg-light-green p-8 text-sm text-dark-forest md:rounded-lg">
+    <div className="flex flex-col gap-1 bg-light-green md:p-8 text-sm text-dark-forest md:rounded-lg">
       <h1 className="text-lg text-center mb-4">Varukorgen</h1>
       <div className="grid grid-cols-6 items-center">
         <p className="col-span-2">Omplantering</p>
         <div></div>
         <p className="col-span-1">1 st</p>
         <p className="col-span-1">1 500 kr</p>
-        <span className="col-span-1 flex items-center justify-end">
-          <FontAwesomeIcon
-            onClick={() => cart.removePot(pot.id)}
-            className="text-dark-forest opacity-70 cursor-pointer"
-            icon={faTrashCan}
-          />
-        </span>
+        <div className="col-span-1 flex items-center justify-end"></div>
       </div>
 
       <p>Datum: {cart.slot?.date?.toLocaleDateString?.()}</p>
@@ -52,13 +47,13 @@ export const Cart = () => {
           <div className="col-span-2 border-cyan-900 pl-1">{pot.name}</div>
           <div className="col-span-1">{pot.amount} st</div>
           <div className="col-span-1">{pot.price} kr</div>
-          <span className="col-span-1 flex items-center justify-end">
+          <div className="col-span-1 flex items-center justify-end">
             <FontAwesomeIcon
               onClick={() => cart.removePot(pot.id)}
               className="text-dark-forest opacity-70 cursor-pointer"
               icon={faTrashCan}
             />
-          </span>
+          </div>
           <input
             name="products"
             type="hidden"

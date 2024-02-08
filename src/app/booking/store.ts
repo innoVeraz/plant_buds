@@ -7,8 +7,9 @@ type SelectedSlot = {
   date: Date;
 };
 
-type Pot = products & {
+export type Pot = products & {
   amount: number;
+  id: number;
 };
 
 type State = {
