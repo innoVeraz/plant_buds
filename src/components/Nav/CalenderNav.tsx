@@ -57,15 +57,15 @@ export const CalenderNav = ({
   });
 
   return (
-    <div>
-      <div className="flex gap-2 justify-center items-center h-10 mt-4  font-thin  ">
+    <div className=" shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+      <div className="flex gap-2 justify-center items-center h-10 mt-4   ">
         <div>
           <ChevronLeftIcon
             onClick={PrevDayClick}
-            className="mr-20 mb-1 w-8 h-8 cursor-pointer"
+            className="mr-20 mb-1 w-8 h-8 r"
           />
         </div>
-        <p className="text-xl">{formattedDate}</p>
+        <p className="text-2xl">{formattedDate}</p>
         <CalendarIcon
           onClick={toggleCalendar}
           className="mb-1 ml-4 w-5 h-5 cursor-pointer"

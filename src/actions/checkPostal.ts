@@ -13,7 +13,6 @@ export async function checkPostal(
   prevState: string,
   formData: FormData
 ): Promise<Outcome> {
-  console.log("check", formData);
   try {
     const postalNumber = postalNumberSchema.parse(formData.get("postalnumber"));
     const data = await getInfoByPostalNumber(postalNumber);

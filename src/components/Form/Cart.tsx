@@ -19,7 +19,7 @@ export const Cart = () => {
   };
 
   return (
-    <div className="flex flex-col gap-1 bg-light-green md:p-8 text-sm text-dark-forest md:rounded-lg">
+    <div className="flex flex-col gap-2 bg-light-green p-4 md:p-8 text-sm text-dark-forest md:rounded-lg">
       <h1 className="text-lg text-center mb-4">Varukorgen</h1>
       <div className="grid grid-cols-6 items-center">
         <p className="col-span-2">Omplantering</p>

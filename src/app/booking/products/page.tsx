@@ -28,15 +28,15 @@ const Products = async () => {
     <div>
       <h2 className="text-3xl text-center font-thin pt-10">Bokning</h2>
       <div className="pb-20 mt-10 mb-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
-        <PostalNumberForm />
-        <h3 className="text-2xl text-center font-thin pt-10">
+        {/* <PostalNumberForm /> */}
+        <h3 className="text-3xl text-center font-thin pt-10">
           Välj dag och tid
         </h3>
         <SelectDay initialSlots={initialSlots} />
       </div>
 
       <h2 className="text-3xl text-center font-thin pt-10">Lägg till krukor</h2>
-      <div className="pb-20 mt-10 mb-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
+      <div className=" mt-10 mb-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
         <ProductCard partialProducts={partialProducts} />
         <BottomNav prev="/" next="/booking/checkout" />
       </div>

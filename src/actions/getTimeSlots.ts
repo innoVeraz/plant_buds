@@ -10,13 +10,10 @@ export type Slot = {
 
 export const getTimeSlots = async (timeStamp: number) => {
   const date = new Date(timeStamp);
-  console.log("getting timeslots", date.getUTCDate());
 
   const bookings = await prisma.bookings.findMany({
     where: { date: { equals: date } },
   });
-
-  console.log("bookings", bookings);
 
   const slots = [
     {

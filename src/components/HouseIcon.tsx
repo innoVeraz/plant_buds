@@ -7,7 +7,7 @@ const HouseIcon = () => {
     <Link href="/">
       <FontAwesomeIcon
         width={30}
-        className="md:text-xl mb-8 opacity-80"
+        className="md:text-2xl mb-8 opacity-80"
         icon={faHouse}
       />
     </Link>

@@ -13,8 +13,7 @@ const Button = ({ variant, children, className, ...props }: IButtonProps) => {
   let classes = "";
 
   if (variant === "primary") {
-    classes =
-      "bg-leaf-green text-white font-regular pt-3 transition duration-150 ease-out hover:ease-in";
+    classes = "bg-leaf-green text-white px-4";
   }
   if (variant === "secondary") {
     classes = "bg-gray-500 text-dark-forest";

@@ -10,8 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Checkout = () => {
   return (
     <div>
-      <div className="max-w-screen-lg m-auto px-2 py-10">
-        <h3 className="text-3xl text-center font-thin mb-10">
+      <div className="max-w-screen-lg m-auto px-2 py-10 ">
+        <h3 className="text-3xl text-center mb-10 font-thin">
           Välkommen till kassan
         </h3>
         <form action={createOrder}>
@@ -20,14 +20,16 @@ const Checkout = () => {
               <Delivery />
               <Contact />
             </div>
-            <div>
+            <div className="pb-4">
               <Cart />
             </div>
           </div>
           <div className="p-8 md:rounded-lg md:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
-            <div className="flex justify-center items-center gap-4 py-4">
-              <h3 className="text-lg">Kortbetalning</h3>
-              <FontAwesomeIcon icon={faCreditCard} />
+            <div className="flex justify-center items-center gap-4 py-4 md:text-3xl">
+              <h3 className="font-thin">Kortbetalning</h3>
+              <div className="">
+                <FontAwesomeIcon icon={faCreditCard} />
+              </div>
             </div>
             <Payment />
             <div className="flex justify-center p-8">

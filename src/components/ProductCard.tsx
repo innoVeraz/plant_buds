@@ -12,7 +12,6 @@ type Props = {
 
 const ProductCard = ({ partialProducts }: Props) => {
   const cart = useShoppingCartStore();
-  console.log(cart);
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 p-8 gap-4 font-thin ">
@@ -39,12 +38,11 @@ const ProductCard = ({ partialProducts }: Props) => {
               <p>{product.price} kr</p>
               <Button
                 variant="primary"
-                className="p-2 mt-2"
                 onClick={() => {
                   cart.addPot(product);
                 }}
               >
-                Lägg i varukorgen
+                Lägg till
               </Button>
             </div>
           </div>

@@ -14,8 +14,6 @@ async function getData() {
 export default async function AdminPage() {
   const bookings = await getData();
 
-  console.log(bookings);
-
   return (
     <main className="m-auto max-w-3xl">
       {bookings.map((x) => (

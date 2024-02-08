@@ -16,7 +16,6 @@ type Props = {
 
 export const FeedbackDialog = ({ outcome, open, onClose }: Props) => {
   const { pending } = useFormStatus();
-  console.log(pending);
 
   return (
     <Dialog.Root open={open} onOpenChange={onClose}>

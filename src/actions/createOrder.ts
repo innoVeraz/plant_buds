@@ -1,6 +1,7 @@
 "use server";
 
 import prisma from "@/db";
+import { redirect } from "next/navigation";
 import { z } from "zod";
 
 const userSchema = z.object({ email: z.string().email() });
@@ -71,9 +72,9 @@ export const createOrder = async (formData: FormData) => {
       },
     },
   });
-  console.log("created/updated user", user);
-  console.log("created booking", booking);
-  console.log(formData);
+  // console.log("created/updated user", user);
+  // console.log("created booking", booking);
+  // console.log(formData);
 
-  return true;
+  redirect("/booking/receipt");
 };
