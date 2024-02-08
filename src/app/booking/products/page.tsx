@@ -12,7 +12,7 @@ async function getProducts() {
 
 async function getPartialProducts() {
   const partialProducts = await prisma?.products.findMany({
-    take: 4,
+    take: 8,
   });
   return partialProducts;
 }

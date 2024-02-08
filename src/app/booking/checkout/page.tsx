@@ -4,11 +4,13 @@ import Button from "@/components/Button";
 import { Cart, Contact, Payment } from "@/components/Form";
 import { Delivery } from "@/components/Form/Delivery";
 import { createOrder } from "@/actions";
+import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Checkout = () => {
   return (
     <div>
-      <div className="max-w-screen-lg m-auto p-8">
+      <div className="max-w-screen-lg m-auto px-2 py-10">
         <h3 className="text-3xl text-center font-thin mb-10">
           Välkommen till kassan
         </h3>
@@ -23,6 +25,10 @@ const Checkout = () => {
             </div>
           </div>
           <div className="p-8 md:rounded-lg md:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+            <div className="flex justify-center items-center gap-4 py-4">
+              <h3 className="text-lg">Kortbetalning</h3>
+              <FontAwesomeIcon icon={faCreditCard} />
+            </div>
             <Payment />
             <div className="flex justify-center p-8">
               <Button type="submit" variant="black">

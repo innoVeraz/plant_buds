@@ -20,7 +20,8 @@ const Button = ({ variant, children, className, ...props }: IButtonProps) => {
     classes = "bg-gray-500 text-dark-forest";
   }
   if (variant === "black") {
-    classes = "bg-black text-white md:w-4/12 w-fit px-4 text-lg font-thin";
+    classes =
+      "bg-black text-white w-full max-w-[10em] px-4 text-lg font-regular pt-3";
   }
   if (variant === "gray") {
     classes = "bg-mellow-gray text-white md:text-xl md:px-8  py-1 font-thin";

@@ -10,7 +10,7 @@ export const Payment = () => {
             name="cardname"
             type="text"
             id="kortnamn"
-            className="bg-gray-50 border mb-4 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border max-w-[31em] mb-4 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Namn på kortet"
             required
           />
@@ -30,7 +30,7 @@ export const Payment = () => {
           </div>
         </div>
 
-        <div className="grid gap-6 mb-6 md:grid-cols-2 ">
+        <div className="grid gap-6 mb-6 md:grid-cols-4 ">
           <div>
             <input
               aria-label="giltigt till mån/år"

@@ -36,7 +36,7 @@ export default async function AdminPage() {
           </div>
           <div>kund: {x.users?.email}</div>
           <div>
-            adress: {x.address?.street}, {x.address?.postal_code},{" "}
+            adress: {x.address?.street}, {x.address?.postal_code},
             {x.address?.city}
           </div>
         </div>
