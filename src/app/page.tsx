@@ -11,7 +11,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Home = () => {
   return (
-    <div className="text-dark-forest ">
+    <div className="">
       <div id="postalnumber" className="flex flex-col gap-4">
         <div className="md:relative">
           <Image
@@ -24,7 +24,7 @@ const Home = () => {
           </div>
         </div>
         <ScrollLink to="omplantering" smooth={true} offset={-400}>
-          <h1 className="text-4xl font-thin md:py-4 md:text-8xl ">
+          <h1 className="text-center md:text-left text-4xl font-thin md:py-4 md:text-8xl ">
             Omplantering
           </h1>
         </ScrollLink>

@@ -25,7 +25,7 @@ export const PostalNumberForm = () => {
         <input
           id="#postalcode"
           name="postalnumber"
-          className="p-2 pl-2 w-full text-mellow-gray font-medium"
+          className="p-2 pl-2 w-full max-w-[10em] text-mellow-gray font-medium"
           type="text"
           placeholder="Postnummer"
           //TODO: add client side validation

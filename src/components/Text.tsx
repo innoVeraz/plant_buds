@@ -33,9 +33,11 @@ export const OurService = () => {
 
 export const BugService = () => {
   return (
-    <div className="md:py-8">
-      <h1 className="text-4xl font-thin md:py-4 md:text-8xl">Ohyra?</h1>
-      <h3 className="pb-4 text-center text-xl md:text-2xl">
+    <div className="px-4 md:py-8">
+      <h1 className="text-4xl font-thin text-center md:text-left md:py-4 md:text-8xl">
+        Ohyra?
+      </h1>
+      <h3 className="pb-4 text-center text-xl md:text-left md:text-2xl">
         Har du fått oinbjudna gäster?
       </h3>
       <p className="md:text-lg md:font-thin md:pr-8">
