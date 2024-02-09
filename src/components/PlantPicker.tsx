@@ -1,7 +1,6 @@
 "use client";
 
 import { useShoppingCartStore } from "@/app/booking/store";
-// import { useEffect, useState } from "react";
 
 const PlantPicker = () => {
   const plants = useShoppingCartStore((state) => state.plants);

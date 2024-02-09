@@ -4,7 +4,6 @@ import ProductCard from "@/components/ProductCard";
 import { getTimeSlots } from "@/actions/getTimeSlots";
 import { BottomNav } from "@/components/Nav";
 import { SelectDay } from "@/components/SelectDay";
-import { PostalNumberForm } from "@/components/PostalNumber";
 
 async function getProducts() {
   return await prisma?.products.findMany();
@@ -28,7 +27,6 @@ const Products = async () => {
     <div>
       <h2 className="text-3xl text-center font-thin pt-10">Bokning</h2>
       <div className="pb-20 mt-10 mb-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
-        {/* <PostalNumberForm /> */}
         <h3 className="text-3xl text-center font-thin pt-10">
           Välj dag och tid
         </h3>

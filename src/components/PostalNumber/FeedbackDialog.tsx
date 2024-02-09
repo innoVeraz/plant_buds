@@ -1,7 +1,6 @@
 "use client";
 
 import * as Dialog from "@radix-ui/react-dialog";
-import { Button } from "@material-tailwind/react";
 import { useFormStatus } from "react-dom";
 import { FeedbackDialogContent } from "./FeedbackDialogContent";
 import { Outcome } from "./Outcome";

@@ -6,7 +6,6 @@ import Image from "next/image";
 import Button from "./Button";
 
 type Props = {
-  // products: products[];
   partialProducts: products[];
 };
 

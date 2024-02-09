@@ -1,8 +1,4 @@
 import * as Dialog from "@radix-ui/react-dialog";
-import areaIcon from "../../../public/area-icon.svg";
-import Image from "next/image";
-import { Button } from "@material-tailwind/react";
-import Link from "next/link";
 
 export const Error = () => {
   return (

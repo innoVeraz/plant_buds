@@ -7,7 +7,6 @@ const page = () => {
       <Image
         src={confetti}
         alt="blommor mot en grön bakgrund"
-        // layout="fill"
         objectFit="cover"
         className="rounded-xl m-auto"
         height={700}
@@ -17,10 +16,6 @@ const page = () => {
         <h1 className="text-4xl mb-4 p-8 rounded-xl bg-opacity-70 bg-white opacity-90 backdrop-filter backdrop-blur-lg inline-block ">
           Tack för din beställning!
         </h1>
-        <h3 className="text-lg mt-4 bg-white opacity-90 p-4 rounded-xl">
-          En bekräftelse med beställningsuppgifter skickas till din angivna
-          e-postadress
-        </h3>
       </div>
     </div>
   );

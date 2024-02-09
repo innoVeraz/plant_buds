@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome to PlantBuds
 
-## Getting Started
+## Project description
 
-First, run the development server:
+Plant Buds is a fictive company offering a unique replanting service on their platform. Users can schedule a session for their house plants, where Plant Buds will bring a mobile service bus equipped with soil and pots to perform the replanting at the customer's home. The service can connect to a plant store, for easy providings of supplies and the option to sell and deliver new plants and pots in various price ranges on the replanting day.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+In this application you can check your postal number and if you are located in the Stockholm area, we can deliver! You can book a date and a time-slot for the buddies to come and add some new pots. Checkout will create an order and give you verification on the screen.
+
+## How to install and run the project
+
+### Prerequisities
+
+- Node.js > 18
+- npm
+- Docker
+
+Install project dependencies
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Start database
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+docker compose -f ./postgres/compose.yaml up
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Run applicatopn in dev
 
-## Learn More
+```
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+application found at localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Screenshot](start.png)
+![Screenshot](home.png)
+![Screenshot](booking.png)
+![Screenshot](checkout.png)
+![Screenshot](receipt.png)

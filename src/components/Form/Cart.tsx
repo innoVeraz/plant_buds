@@ -1,9 +1,7 @@
-import Products from "@/app/booking/products/page";
 import { useShoppingCartStore } from "@/app/booking/store";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
-import DeleteIcon from "../DeleteIcon";
 
 export const Cart = () => {
   const cart = useShoppingCartStore();
