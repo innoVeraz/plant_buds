@@ -24,12 +24,28 @@ Start database
 
 ```
 docker compose -f ./postgres/compose.yaml up
-```
-
-Run applicatopn in dev
+``
 
 ```
+
+docker compose -f ./postgres/compose.yaml up
+
+```
+
+Run application in dev
+
+```
+
 npm run dev
+
+```
+
+To connect to the database with a psql shell you can use the attach command
+
+```
+
+bash ./postgres/attach.sh
+
 ```
 
 application found at localhost:3000
@@ -39,3 +55,4 @@ application found at localhost:3000
 ![Screenshot](booking.png)
 ![Screenshot](checkout.png)
 ![Screenshot](receipt.png)
+```
