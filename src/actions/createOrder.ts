@@ -72,9 +72,6 @@ export const createOrder = async (formData: FormData) => {
       },
     },
   });
-  // console.log("created/updated user", user);
-  // console.log("created booking", booking);
-  // console.log(formData);
 
   redirect("/booking/receipt");
 };
