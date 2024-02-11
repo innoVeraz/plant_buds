@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Button from "./Button";
+import { Link as ScrollLink } from "react-scroll";
+import Button from "@/components/Button";
 
 export const OurService = () => {
   return (
@@ -22,10 +22,10 @@ export const OurService = () => {
         Vi har många fina krukor i vår shop som du kan välja att lägga till i
         samband med bokningen, vi tar med dem till omplanteringsdagen.
       </p>
-      <div className="flex justify-center py-8">
-        <Link href="#postalnumber">
+      <div className="text-center py-8">
+        <ScrollLink to="postalnumber" smooth={true} offset={-80}>
           <Button variant="primary">Se om vi kan komma hem till dig!</Button>
-        </Link>
+        </ScrollLink>
       </div>
     </div>
   );
